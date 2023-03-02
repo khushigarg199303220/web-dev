@@ -1,0 +1,39 @@
+
+
+
+div{
+    height: 250px;
+width: 400px;
+border: 1px solid #ccc;
+}
+.side-a{
+    background-color: lightcoral;
+    z-index: 2;
+}
+.side-a img{
+    height: 100%;
+    width: 100%;
+}
+.side-b{
+    background-color: lightgreen;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.side-a,.side-b {
+    position: absolute;
+    font-size: 30px;
+    backface-visibility: hidden;
+}
+.wrapper{
+    position: relative;
+    transition: 1s;
+    margin: 30px auto;
+    transform-style: preserve-3d;
+}
+.wrapper:hover{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+body{
+    perspective: 800px;
+}
